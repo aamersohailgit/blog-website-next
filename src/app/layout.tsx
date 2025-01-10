@@ -23,7 +23,7 @@ export default function RootLayout({
                 <span className="text-primary">&lt;&gt;</span> CoderBlog
               </a>
             </div>
-            <div className="flex-none">
+            <div className="flex-none gap-4">
               <ul className="menu menu-horizontal px-1">
                 <li><a href="/" className="btn btn-ghost">Home</a></li>
                 <li><a href="/about" className="btn btn-ghost">About</a></li>
@@ -31,20 +31,22 @@ export default function RootLayout({
               </ul>
               <ThemeToggle />
               <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
-                    <img alt="User avatar" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <label tabIndex={0} className="btn btn-ghost btn-circle">
+                  <div className="avatar">
+                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="User avatar" />
+                    </div>
                   </div>
                 </label>
                 <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-200 rounded-box w-52">
                   <li>
-                    <a href="/profile" className="justify-between">
+                    <a className="justify-between">
                       Profile
-                      <span className="badge">New</span>
+                      <span className="badge badge-primary badge-sm">New</span>
                     </a>
                   </li>
-                  <li><a href="/settings">Settings</a></li>
-                  <li><a href="/logout">Logout</a></li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
                 </ul>
               </div>
             </div>
