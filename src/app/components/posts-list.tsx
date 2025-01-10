@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import type { Database } from '@/lib/database.types'
 import { SearchBar } from './search-bar'
+import { formatDate } from '@/lib/utils'
 
 type Post = Database['public']['Tables']['posts']['Row']
 
@@ -26,7 +27,7 @@ export function PostsList({ initialPosts }: { initialPosts: Post[] }) {
               <div className="card-body">
                 <h2 className="card-title text-2xl">{post.title}</h2>
                 <p className="text-sm opacity-70">
-                  By {post.author} • {new Date(post.published_at).toLocaleDateString()}
+                  By {post.author} • {formatDate(post.published_at)}
                 </p>
                 <p className="mt-2">{post.excerpt}</p>
                 <div className="card-actions mt-4">

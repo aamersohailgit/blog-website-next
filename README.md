@@ -2,7 +2,9 @@
 
 A modern blog platform for developers built with Next.js, Supabase, and DaisyUI.
 
-![CoderBlog Screenshot](public/readme.png)
+![CoderBlog Screenshot](public/home.png)
+![CoderBlog Screenshot](public/about.png)
+![CoderBlog Screenshot](public/contact.png)
 
 
 ## Features

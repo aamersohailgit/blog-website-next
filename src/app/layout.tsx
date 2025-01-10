@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from './components/theme-provider'
 import { ThemeToggle } from './components/theme-toggle'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'CoderBlog',
@@ -19,15 +20,15 @@ export default function RootLayout({
         <ThemeProvider>
           <nav className="navbar bg-base-200 border-b border-base-300">
             <div className="flex-1">
-              <a href="/" className="btn btn-ghost text-xl">
+              <Link href="/" className="btn btn-ghost text-xl">
                 <span className="text-primary">&lt;&gt;</span> CoderBlog
-              </a>
+              </Link>
             </div>
             <div className="flex-none gap-4">
               <ul className="menu menu-horizontal px-1">
-                <li><a href="/" className="btn btn-ghost">Home</a></li>
-                <li><a href="/about" className="btn btn-ghost">About</a></li>
-                <li><a href="/contact" className="btn btn-ghost">Contact</a></li>
+                <li><Link href="/" className="btn btn-ghost">Home</Link></li>
+                <li><Link href="/about" className="btn btn-ghost">About</Link></li>
+                <li><Link href="/contact" className="btn btn-ghost">Contact</Link></li>
               </ul>
               <ThemeToggle />
               <div className="dropdown dropdown-end">
