@@ -16,6 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="night">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+      </head>
       <body className="transition-colors duration-300">
         <ThemeProvider>
           <nav className="navbar bg-base-200 border-b border-base-300">
@@ -29,6 +35,11 @@ export default function RootLayout({
                 <li><Link href="/" className="btn btn-ghost">Home</Link></li>
                 <li><Link href="/about" className="btn btn-ghost">About</Link></li>
                 <li><Link href="/contact" className="btn btn-ghost">Contact</Link></li>
+                <li>
+                  <Link href="/posts/new" className="btn btn-ghost">
+                    New Post
+                  </Link>
+                </li>
               </ul>
               <ThemeToggle />
               <div className="dropdown dropdown-end">
